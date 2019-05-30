@@ -1,0 +1,14 @@
+{
+  "name": "portofolio_site",
+  "version": "1.0.0",
+  "description": "my portofolio website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Ghaffaru Mudashiru",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
