@@ -1,0 +1,28 @@
+$primary-color: #444;
+$secondary-color: green;
+
+$show-home-image: true;
+$home-image: url(../dist/img/background.jpg);
+$background-opacity: 0.9;
+
+@mixin easeOut {
+  transition: all 1.5s ease-out;
+}
+
+@mixin background {
+  &#bg-img {
+    background-image: url(../dist/img/background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      z-index: 1;
+      height: 100%;
+      background: rgba($primary-color, $background-opacity);
+    }
+  }
+}
