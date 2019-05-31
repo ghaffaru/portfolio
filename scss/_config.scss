@@ -26,3 +26,35 @@ $background-opacity: 0.9;
     }
   }
 }
+
+// Set Text color
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+//media query mixing
+@mixin mediaSm {
+  @media only screen and (max-width: 500px) {
+    @content;
+  }
+}
+@mixin mediaMd {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin mediaLg {
+  @media only screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin mediaXL {
+  @media only screen and (min-width: 1171px) {
+    @content;
+  }
+}
